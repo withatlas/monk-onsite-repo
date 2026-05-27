@@ -16,6 +16,7 @@
     "db:reset:remote": "tsx scripts/reset-remote.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.99.0",
     "@supabase/supabase-js": "^2.87.1",
     "csv-parse": "^6.1.0",
     "dotenv": "^17.2.3",

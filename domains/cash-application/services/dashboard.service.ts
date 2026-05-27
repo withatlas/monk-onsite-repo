@@ -5,17 +5,21 @@ import { MatchResultDao } from "@/domains/cash-application/dao/match-result.dao"
 import { MatchRunDao } from "@/domains/cash-application/dao/match-run.dao";
 
 export class CashApplicationDashboardService {
-  static async getDashboard() {
+  static async getDashboard(selectedRunId?: string) {
     const [customers, invoices, transactions, matchRuns] = await Promise.all([
       CustomerDao.listAll(),
       InvoiceDao.listWithCustomers(),
       BankTransactionDao.listAll(),
-      MatchRunDao.listRecent(8),
+      MatchRunDao.listRecent(20),
     ]);
 
     const latestRun = matchRuns[0] ?? null;
-    const matchResults = latestRun
-      ? await MatchResultDao.listForRun(latestRun.id)
+    const selectedRun =
+      matchRuns.find((run) => run.id === selectedRunId) ??
+      (selectedRunId ? await MatchRunDao.findById(selectedRunId) : null) ??
+      latestRun;
+    const matchResults = selectedRun
+      ? await MatchResultDao.listForRun(selectedRun.id)
       : [];
     const latestSummary = latestRun?.summary ?? {
       transactionCount: 0,
@@ -31,6 +35,7 @@ export class CashApplicationDashboardService {
       matchRuns,
       matchResults,
       latestRun,
+      selectedRun,
       stats: {
         customerCount: customers.length,
         invoiceCount: invoices.length,

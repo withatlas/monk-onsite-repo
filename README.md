@@ -19,7 +19,7 @@ cp .env.example .env.local
 pnpm dev
 ```
 
-Your interviewer will provide the `DATABASE_URL` for `.env.local`. Candidates should not need to create a Supabase project, run migrations, or seed data.
+Your interviewer will provide the `.env.local` values. Candidates should not need to create a Supabase project, run migrations, or seed data.
 
 The interview database starts with customer and invoice data. Your interviewer may provide transaction data during the session.
 

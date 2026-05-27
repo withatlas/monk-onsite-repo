@@ -12,13 +12,13 @@ cd monk-onsite-repo
 pnpm install
 ```
 
-Your interviewer will provide a `.env.local` value. Add it before starting the app:
+Your interviewer will provide the `.env.local` values. Add them before starting the app:
 
 ```bash
 cp .env.example .env.local
 ```
 
-Paste the provided `DATABASE_URL` into `.env.local`, then run:
+Paste the provided values into `.env.local`, then run:
 
 ```bash
 pnpm dev
@@ -26,7 +26,7 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-You should not need to create a Supabase project, run migrations, or seed data. If the page says the database is unavailable, ask your interviewer for the env value again.
+You should not need to create a Supabase project, run migrations, or seed data. If the page says the database is unavailable, ask your interviewer for the env values again.
 
 The database starts with customer and invoice data. Your interviewer may provide transaction data during the session.
 
