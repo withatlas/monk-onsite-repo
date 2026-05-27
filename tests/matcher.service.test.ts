@@ -4,7 +4,7 @@ import { seedBankTransactions, seedInvoices } from "@/db/seed-data";
 import { MatcherService } from "@/domains/cash-application/services/matcher.service";
 
 describe("MatcherService", () => {
-  it("matches an exact invoice reference and amount", () => {
+  it("returns a matched decision for a linked payment", () => {
     const decision = MatcherService.matchTransaction(seedBankTransactions[0], [
       seedInvoices[0],
     ]);
@@ -16,7 +16,7 @@ describe("MatcherService", () => {
     });
   });
 
-  it("returns unmatched when no invoice satisfies the matcher", () => {
+  it("returns unmatched for an unlinked payment", () => {
     const transaction = {
       ...seedBankTransactions[5]!,
       description: "Incoming customer payment",

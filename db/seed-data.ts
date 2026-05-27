@@ -61,7 +61,7 @@ export const seedInvoices = Array.from({ length: 60 }).map(
 
 const invoiceAt = (index: number) => seedInvoices[index];
 
-const exactPayments = [0, 1, 2, 3, 4].map(index => ({
+const aprilTransactions = [0, 1, 2, 3, 4].map(index => ({
   id: uuidFromNumber(2001 + index),
   externalId: `bank-2026-04-${String(index + 1).padStart(3, "0")}`,
   postedAt: `2026-04-${String(index + 3).padStart(2, "0")}`,
@@ -253,7 +253,7 @@ const generatedTransactions = Array.from({
 }) satisfies BankTransactionInsert[];
 
 export const seedBankTransactions = [
-  ...exactPayments,
+  ...aprilTransactions,
   ...scenarioTransactions,
   ...generatedTransactions,
 ] satisfies BankTransactionInsert[];

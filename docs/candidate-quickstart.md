@@ -1,6 +1,6 @@
 # Candidate Quickstart
 
-Welcome. This repo is a small existing cash application system. Your goal is to understand what it does, identify the most important gaps, and make a focused improvement.
+Welcome. This repo is a small existing cash application system. Your goal is to understand the product and codebase, explain what you think matters, and make a focused improvement.
 
 ## First 5 Minutes
 
@@ -39,32 +39,9 @@ pnpm lint
 
 Do not run reset, deploy, or migration commands unless your interviewer explicitly asks you to.
 
-## Product Context
-
-Cash application means applying incoming bank payments to the correct customer invoices. This app contains:
-
-- customers and invoices
-- imported bank transactions
-- a match run workflow
-- persisted match results
-
-The system is intentionally small. Treat it like a real customer-facing MVP you inherited.
-
-## Where To Start Reading
-
-Start with these files:
-
-- `app/page.tsx`
-- `db/schema.ts`
-- `domains/cash-application/services/match-run.service.ts`
-- `domains/cash-application/services/matcher.service.ts`
-- `domains/cash-application/dao`
-
-Then run the app, click through the dashboard, and inspect what happens when a match run is created.
-
 ## Interview Flow
 
-For the first analysis period, do not use AI. Focus on understanding the current system and deciding what matters.
+You may use AI tools throughout the session, including during analysis. Be ready to explain your reasoning, tradeoffs, and code.
 
 After you present your analysis, your interviewer will help scope the build portion.
 

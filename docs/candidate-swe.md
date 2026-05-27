@@ -1,17 +1,16 @@
 # SWE Onsite Prompt
 
-You are working on the cash application system for a SaaS company. The current app imports bank transactions, stores invoices, runs matching, and persists match results.
+You are working on the cash application system for a SaaS company.
 
-Spend the first 30 minutes understanding the existing implementation. Do not use AI during that first analysis window.
+Use the existing product and codebase to identify a focused backend improvement.
 
-Your analysis should include:
+You may use AI tools throughout the session. Be ready to explain your reasoning, tradeoffs, and code.
 
-- what data is available to the matcher
-- how the current matching path behaves
-- which correctness risks matter most
-- what data model changes you would consider
-- which tests should exist before and after your change
+In the discussion portion, be ready to cover:
 
-After the analysis window, choose a scoped backend improvement and build it. Optimize for matching quality, maintainability, and clear correctness boundaries.
+- what behavior you think matters most
+- what risks or edge cases you would prioritize
+- what change you would build first and why
+- how you would test or validate it
 
-You may use AI during the build portion after you have presented your analysis.
+Then choose a scoped backend improvement and build it. Optimize for correctness, maintainability, and clear reviewability.
