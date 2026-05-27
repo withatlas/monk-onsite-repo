@@ -1,0 +1,7 @@
+external_id,posted_at,description,counterparty,amount,currency
+sample-001,2026-05-03,ACH CREDIT INV-2026-1001,Brightlayer Labs,1200.00,USD
+sample-002,2026-05-04,customer payment april services,JCloud,4376.00,USD
+sample-003,2026-05-05,CARD SETTLEMENT BATCH 515,Adyen,8790.00,USD
+sample-004,2026-05-06,refund request processed,Maple Robotics,-750.00,USD
+sample-005,2026-05-07,LOCKBOX 91822 CUSTOMER PAYMENT,Bank Lockbox,6433.00,USD
+sample-006,2026-05-08,ACH CREDIT INV-2026-1002,Northstar Bio,1811.00,USD
