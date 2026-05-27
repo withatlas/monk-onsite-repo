@@ -6,7 +6,7 @@ Use the existing product and codebase to identify a focused backend improvement.
 
 During the initial analysis period, do not use AI tools. After you present your analysis and align with your interviewer on a scoped build, you may use AI tools during implementation. Be ready to explain your reasoning, tradeoffs, and code.
 
-For SWE, bias toward backend correctness, matching quality, data modeling judgment, edge cases, and tests.
+For SWE, bias toward backend correctness, matching quality, data modeling judgment, scalability, edge cases, and tests.
 
 In the discussion portion, be ready to cover:
 
