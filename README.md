@@ -28,4 +28,8 @@ pnpm dev
 pnpm test
 pnpm typecheck
 pnpm lint
+pnpm db:seed
+pnpm db:reset:remote
 ```
+
+Remote seed/reset commands require `REMOTE_RESET_CONFIRM=monk-onsite-repo`.

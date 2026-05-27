@@ -11,7 +11,9 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "db:seed": "tsx scripts/seed.ts",
+    "db:reset:remote": "tsx scripts/reset-remote.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.87.1",

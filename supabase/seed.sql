@@ -1,1 +1,2 @@
--- Seed data is provided by the interview environment.
+-- This repo uses `pnpm db:seed` for deterministic TypeScript seed data.
+-- Supabase still expects this file during `supabase db reset`.
