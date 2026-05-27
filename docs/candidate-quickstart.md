@@ -43,7 +43,11 @@ Do not run reset, deploy, or migration commands unless your interviewer explicit
 
 ## Interview Flow
 
-You may use AI tools throughout the session, including during analysis. Be ready to explain your reasoning, tradeoffs, and code.
+During the initial analysis period, do not use AI tools. After you present your analysis and align with your interviewer on a scoped build, you may use AI tools during implementation. Be ready to explain your reasoning, tradeoffs, and code.
+
+We care most about reasoning, scoping, correctness, and shipping one focused improvement.
+
+Spend the first part of the session understanding the product, data, and codebase. Before building, propose 1-2 scoped improvements and align with your interviewer.
 
 After you present your analysis, your interviewer will help scope the build portion.
 

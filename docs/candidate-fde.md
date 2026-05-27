@@ -4,7 +4,9 @@ You are joining a customer call for a SaaS company that wants to reduce manual c
 
 Use the existing product and codebase to form a recommendation and choose a focused build.
 
-You may use AI tools throughout the session. Be ready to explain your reasoning, tradeoffs, and code.
+During the initial analysis period, do not use AI tools. After you present your analysis and align with your interviewer on a scoped build, you may use AI tools during implementation. Be ready to explain your reasoning, tradeoffs, and code.
+
+For FDE, bias toward customer understanding, recommendations, rollout plan, and a scoped implementation that improves the workflow.
 
 In the discussion portion, be ready to cover:
 

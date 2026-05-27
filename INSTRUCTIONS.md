@@ -34,11 +34,17 @@ The database starts with customer and invoice data. Your interviewer may provide
 
 ## Interview Flow
 
-You may use AI tools throughout the session, including during analysis. Be ready to explain your reasoning, tradeoffs, and code.
+During the initial analysis period, do not use AI tools. After you present your analysis and align with your interviewer on a scoped build, you may use AI tools during implementation. Be ready to explain your reasoning, tradeoffs, and code.
 
 Start by exploring the product and repository. Your interviewer will ask you to summarize what you found, where you would focus, and what you plan to build.
 
 After that discussion, choose a scoped improvement and implement it.
+
+## How To Succeed
+
+We care most about reasoning, scoping, correctness, and shipping one focused improvement.
+
+Spend the first part of the session understanding the product, data, and codebase. Before building, propose 1-2 scoped improvements and align with your interviewer.
 
 ## Useful Commands
 
