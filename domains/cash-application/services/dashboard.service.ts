@@ -6,16 +6,17 @@ import { MatchRunDao } from "@/domains/cash-application/dao/match-run.dao";
 
 export class CashApplicationDashboardService {
   static async getDashboard() {
-    const [customers, invoices, transactions, matchRuns, matchResults] =
-      await Promise.all([
-        CustomerDao.listAll(),
-        InvoiceDao.listWithCustomers(),
-        BankTransactionDao.listAll(),
-        MatchRunDao.listRecent(8),
-        MatchResultDao.listLatest(120),
-      ]);
+    const [customers, invoices, transactions, matchRuns] = await Promise.all([
+      CustomerDao.listAll(),
+      InvoiceDao.listWithCustomers(),
+      BankTransactionDao.listAll(),
+      MatchRunDao.listRecent(8),
+    ]);
 
     const latestRun = matchRuns[0] ?? null;
+    const matchResults = latestRun
+      ? await MatchResultDao.listForRun(latestRun.id)
+      : [];
     const latestSummary = latestRun?.summary ?? {
       transactionCount: 0,
       matchedCount: 0,
