@@ -30,6 +30,8 @@ Open [http://localhost:3000](http://localhost:3000).
 
 You should not need to create a Supabase project, run migrations, reset the database, or seed data. If the app cannot connect to the database, ask your interviewer for the env value again.
 
+The database starts with customer and invoice data. Your interviewer may provide transaction data during the session.
+
 ## Interview Flow
 
 You may use AI tools throughout the session, including during analysis. Be ready to explain your reasoning, tradeoffs, and code.

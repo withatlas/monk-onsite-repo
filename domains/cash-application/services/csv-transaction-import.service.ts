@@ -37,7 +37,6 @@ export class CsvTransactionImportService {
         counterparty: parsed.counterparty,
         amountCents: dollarsToCents(parsed.amount),
         currency: parsed.currency ?? "USD",
-        rawPayload: row,
       };
     });
   }

@@ -1,6 +1,6 @@
 # SWE Onsite Prompt
 
-You are working on the cash application system for a SaaS company.
+You are working on the cash application system for a SaaS company. The product needs to reconcile customer invoices against bank transaction exports.
 
 Use the existing product and codebase to identify a focused backend improvement.
 

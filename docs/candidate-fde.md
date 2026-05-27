@@ -1,6 +1,6 @@
 # FDE Onsite Prompt
 
-You are joining a customer call for a SaaS company that wants to reduce manual cash application work. They have invoices in the system and bank transactions coming from their operating account.
+You are joining a customer call for a SaaS company that wants to reduce manual cash application work. They have invoices in the system and bank transactions coming from their operating account exports.
 
 Use the existing product and codebase to form a recommendation and choose a focused build.
 

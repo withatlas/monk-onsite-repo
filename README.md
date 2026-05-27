@@ -21,6 +21,8 @@ pnpm dev
 
 Your interviewer will provide the `DATABASE_URL` for `.env.local`. Candidates should not need to create a Supabase project, run migrations, or seed data.
 
+The interview database starts with customer and invoice data. Your interviewer may provide transaction data during the session.
+
 ## Useful Commands
 
 ```bash

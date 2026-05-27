@@ -28,6 +28,8 @@ Open [http://localhost:3000](http://localhost:3000).
 
 You should not need to create a Supabase project, run migrations, or seed data. If the page says the database is unavailable, ask your interviewer for the env value again.
 
+The database starts with customer and invoice data. Your interviewer may provide transaction data during the session.
+
 ## Useful Commands
 
 ```bash

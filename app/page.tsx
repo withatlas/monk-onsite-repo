@@ -320,6 +320,13 @@ export default async function Home({
                       </td>
                     </tr>
                   ))}
+                  {dashboard.transactions.length === 0 ? (
+                    <tr>
+                      <td className="px-4 py-6 text-[#697386]" colSpan={5}>
+                        No transactions
+                      </td>
+                    </tr>
+                  ) : null}
                 </tbody>
               </table>
             </div>

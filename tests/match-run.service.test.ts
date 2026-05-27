@@ -1,16 +1,24 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import { seedBankTransactions, seedInvoices } from "@/db/seed-data";
+import { seedInvoices } from "@/db/seed-data";
 import { BankTransactionDao } from "@/domains/cash-application/dao/bank-transaction.dao";
 import { InvoiceDao } from "@/domains/cash-application/dao/invoice.dao";
 import { MatchResultDao } from "@/domains/cash-application/dao/match-result.dao";
 import { MatchRunDao } from "@/domains/cash-application/dao/match-run.dao";
 import { MatchRunService } from "@/domains/cash-application/services/match-run.service";
 
+const transactionId = (index: number) =>
+  `00000000-0000-4000-8000-${String(2001 + index).padStart(12, "0")}`;
+
 const selectedTransaction = (index: number) => ({
-  ...seedBankTransactions[index]!,
-  currency: seedBankTransactions[index]!.currency ?? "USD",
-  rawPayload: seedBankTransactions[index]!.rawPayload ?? {},
+  id: transactionId(index),
+  externalId: `test-transaction-${index + 1}`,
+  postedAt: "2026-05-01",
+  description: `ACH CREDIT ${seedInvoices[index]!.invoiceNumber}`,
+  counterparty: "Test Counterparty",
+  amountCents: seedInvoices[index]!.amountCents,
+  currency: "USD",
+  rawPayload: {},
   importedAt: new Date("2026-05-01T00:00:00.000Z"),
 });
 
@@ -62,13 +70,13 @@ describe("MatchRunService", () => {
     expect(MatchResultDao.createMany).toHaveBeenCalledWith([
       expect.objectContaining({
         matchRunId: "00000000-0000-4000-8000-000000009001",
-        transactionId: seedBankTransactions[0].id,
+        transactionId: transactionId(0),
         invoiceId: seedInvoices[0].id,
         status: "matched",
       }),
       expect.objectContaining({
         matchRunId: "00000000-0000-4000-8000-000000009001",
-        transactionId: seedBankTransactions[1].id,
+        transactionId: transactionId(1),
         invoiceId: seedInvoices[1].id,
         status: "matched",
       }),

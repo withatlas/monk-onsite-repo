@@ -5,11 +5,7 @@ import {
   matchResults,
   matchRuns,
 } from "@/db/schema";
-import {
-  seedBankTransactions,
-  seedCustomers,
-  seedInvoices,
-} from "@/db/seed-data";
+import { seedCustomers, seedInvoices } from "@/db/seed-data";
 import { db } from "@/domains/platform/infra/db/baseClient";
 
 export async function resetAndSeedCashApplicationData() {
@@ -21,11 +17,10 @@ export async function resetAndSeedCashApplicationData() {
 
   await db.insert(customers).values(seedCustomers);
   await db.insert(invoices).values(seedInvoices);
-  await db.insert(bankTransactions).values(seedBankTransactions);
 
   return {
     customerCount: seedCustomers.length,
     invoiceCount: seedInvoices.length,
-    transactionCount: seedBankTransactions.length,
+    transactionCount: 0,
   };
 }

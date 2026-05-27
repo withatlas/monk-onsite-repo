@@ -5,8 +5,8 @@ import { CsvTransactionImportService } from "@/domains/cash-application/services
 
 describe("CsvTransactionImportService", () => {
   it("parses transaction CSV rows", () => {
-    const rows = CsvTransactionImportService.parseCsv(`external_id,posted_at,description,counterparty,amount,currency
-csv-1,2026-05-01,ACH CREDIT INV-2026-1001,Brightlayer Labs,1200.00,USD`);
+    const rows = CsvTransactionImportService.parseCsv(`external_id,posted_at,description,counterparty,amount,currency,memo,reference
+csv-1,2026-05-01,ACH CREDIT INV-2026-1001,Brightlayer Labs,1200.00,USD,paid by parent,INV-2026-1001`);
 
     expect(rows).toEqual([
       expect.objectContaining({
@@ -18,6 +18,7 @@ csv-1,2026-05-01,ACH CREDIT INV-2026-1001,Brightlayer Labs,1200.00,USD`);
         currency: "USD",
       }),
     ]);
+    expect(rows[0]).not.toHaveProperty("rawPayload");
   });
 
   it("imports parsed transaction rows", async () => {
