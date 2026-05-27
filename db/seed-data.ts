@@ -29,6 +29,15 @@ const amountCycle = [
 const paidInvoiceIndexes = new Set([7, 18, 29, 40, 51, 58]);
 
 const invoiceMemoOverrides = new Map<number, string>([
+  [4, "Provider reporting module subscription"],
+  [23, "Energy operations telemetry renewal"],
+  [25, "Training platform renewal"],
+  [26, "Cold chain food distribution analytics subscription"],
+  [27, "Carrier network analytics renewal"],
+  [33, "Retail store planning analytics renewal"],
+  [36, "Freight dock scheduling subscription"],
+  [38, "Grid operations analytics support"],
+  [39, "Workforce onboarding reporting renewal"],
   [43, "Legal counsel workflow subscription"],
   [46, "Bioscience lab analytics renewal"],
   [53, "Energy operations platform renewal"],

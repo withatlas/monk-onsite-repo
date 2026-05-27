@@ -45,6 +45,8 @@ Do not run reset, deploy, or migration commands unless your interviewer explicit
 
 During the initial analysis period, do not use AI tools. After you present your analysis and align with your interviewer on a scoped build, you may use AI tools during implementation. Be ready to explain your reasoning, tradeoffs, and code.
 
+During implementation, you may use the model API values provided in `.env.local` for semantic remittance matching. If you do, validate structured outputs and keep low-confidence matches reviewable.
+
 We care most about reasoning, scoping, correctness, and shipping one focused improvement.
 
 Spend the first part of the session understanding the product, data, and codebase. Before building, propose 1-2 scoped improvements and align with your interviewer.

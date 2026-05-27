@@ -23,6 +23,8 @@ Your interviewer will provide the `.env.local` values. Candidates should not nee
 
 The interview database starts with customer and invoice data. Your interviewer may provide transaction data during the session.
 
+Model API values may be provided in `.env.local` for semantic remittance matching during the implementation phase after analysis.
+
 ## Useful Commands
 
 ```bash

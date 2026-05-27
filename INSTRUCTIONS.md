@@ -40,6 +40,8 @@ Start by exploring the product and repository. Your interviewer will ask you to 
 
 After that discussion, choose a scoped improvement and implement it.
 
+The customer data includes messy remittance context. Model-assisted or semantic matching is in scope during implementation, and strong solutions should stay conservative about what gets auto-matched versus sent to review.
+
 ## How To Succeed
 
 We care most about reasoning, scoping, correctness, and shipping one focused improvement.
