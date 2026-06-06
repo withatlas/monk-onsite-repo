@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+import { AdminActions } from "@/app/_components/admin-actions";
 import { OperationsPanel } from "@/app/_components/operations-panel";
 import { TransactionImportPanel } from "@/app/_components/transaction-import-panel";
 import { CashApplicationDashboardService } from "@/domains/cash-application/services/dashboard.service";
@@ -391,9 +392,12 @@ export default async function Home({
                   : "No match run yet"}
               </p>
             </div>
-            <div className="flex items-center gap-2 rounded-lg border border-[#d9ded7] bg-white px-3 py-2 text-sm text-[#697386]">
-              <Clock3 size={16} aria-hidden="true" />
-              {dashboard.transactions.length} imported transactions
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 rounded-lg border border-[#d9ded7] bg-white px-3 py-2 text-sm text-[#697386]">
+                <Clock3 size={16} aria-hidden="true" />
+                {dashboard.transactions.length} imported transactions
+              </div>
+              <AdminActions />
             </div>
           </div>
 
