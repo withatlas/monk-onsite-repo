@@ -421,7 +421,10 @@ export default async function Home({
         </div>
       </header>
 
-      <OperationsPanel />
+      <OperationsPanel
+        transactionCount={dashboard.transactions.length}
+        hasMatchRun={dashboard.matchRuns.length > 0}
+      />
       <DashboardNav
         activeView={activeView}
         dashboard={visibleDashboard}

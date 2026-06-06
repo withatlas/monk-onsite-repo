@@ -1,6 +1,7 @@
 import { closeDb } from "@/domains/platform/infra/db/baseClient";
 import { loadFirstEnv } from "@/scripts/env";
 import { resetAndSeedCashApplicationData } from "@/scripts/reset-and-seed";
+import { rebuildCashApplicationSchema } from "@/scripts/reset-schema";
 
 const loadedEnv = loadFirstEnv([".env.local"]);
 const databaseUrl = process.env.DATABASE_URL ?? "";
@@ -24,10 +25,11 @@ if (process.env.REMOTE_RESET_CONFIRM !== "monk-onsite-repo") {
 }
 
 try {
+  await rebuildCashApplicationSchema(databaseUrl);
   const result = await resetAndSeedCashApplicationData();
 
   console.log(
-    `Reset remote data${loadedEnv ? ` using ${loadedEnv}` : ""}: ${result.customerCount} customers, ${result.invoiceCount} invoices, ${result.transactionCount} transactions.`,
+    `Reset remote schema and data${loadedEnv ? ` using ${loadedEnv}` : ""}: ${result.customerCount} customers, ${result.invoiceCount} invoices, ${result.transactionCount} transactions.`,
   );
 } finally {
   await closeDb();
