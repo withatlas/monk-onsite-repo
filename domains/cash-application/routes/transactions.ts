@@ -1,7 +1,14 @@
 import { CsvTransactionImportService } from "@/domains/cash-application/services/csv-transaction-import.service";
 
+type UploadCsvOptions = {
+  replace?: boolean;
+};
+
 export class TransactionRoutes {
-  static async uploadCsv(formData: FormData) {
+  static async uploadCsv(
+    formData: FormData,
+    options: UploadCsvOptions = {},
+  ) {
     const file = formData.get("file");
 
     if (!(file instanceof File)) {
@@ -9,6 +16,8 @@ export class TransactionRoutes {
     }
 
     const contents = await file.text();
-    return CsvTransactionImportService.importCsv(contents);
+    return options.replace
+      ? CsvTransactionImportService.replaceCsv(contents)
+      : CsvTransactionImportService.importCsv(contents);
   }
 }

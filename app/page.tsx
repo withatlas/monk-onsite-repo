@@ -9,6 +9,7 @@ import {
 import Link from "next/link";
 
 import { OperationsPanel } from "@/app/_components/operations-panel";
+import { TransactionImportPanel } from "@/app/_components/transaction-import-panel";
 import { CashApplicationDashboardService } from "@/domains/cash-application/services/dashboard.service";
 import { centsToDollars } from "@/lib/money";
 
@@ -516,46 +517,53 @@ export default async function Home({
                 {visibleDashboard.transactions.length} rows
               </span>
             </div>
-            <div className="table-scroll rounded-lg border border-[#d9ded7] bg-white">
-              <table className="min-w-full border-collapse text-left text-sm">
-                <thead className="border-b border-[#d9ded7] bg-[#f2f4f0] text-xs uppercase text-[#697386]">
-                  <tr>
-                    <th className="px-4 py-3">Posted</th>
-                    <th className="px-4 py-3">Description</th>
-                    <th className="px-4 py-3">Counterparty</th>
-                    <th className="px-4 py-3">Amount</th>
-                    <th className="px-4 py-3">External ID</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {visibleDashboard.transactions.map((transaction) => (
-                    <tr
-                      key={transaction.id}
-                      className="border-b border-[#edf0eb]"
-                    >
-                      <td className="px-4 py-3">{transaction.postedAt}</td>
-                      <td className="max-w-[320px] px-4 py-3">
-                        {transaction.description}
-                      </td>
-                      <td className="px-4 py-3">{transaction.counterparty}</td>
-                      <td className="px-4 py-3 tabular-nums">
-                        {centsToDollars(transaction.amountCents)}
-                      </td>
-                      <td className="px-4 py-3 text-[#697386]">
-                        {transaction.externalId}
-                      </td>
-                    </tr>
-                  ))}
-                  {visibleDashboard.transactions.length === 0 ? (
+            <TransactionImportPanel
+              transactionCount={dashboard.transactions.length}
+            />
+            {dashboard.transactions.length > 0 ? (
+              <div className="table-scroll rounded-lg border border-[#d9ded7] bg-white">
+                <table className="min-w-full border-collapse text-left text-sm">
+                  <thead className="border-b border-[#d9ded7] bg-[#f2f4f0] text-xs uppercase text-[#697386]">
                     <tr>
-                      <td className="px-4 py-6 text-[#697386]" colSpan={5}>
-                        No transactions
-                      </td>
+                      <th className="px-4 py-3">Posted</th>
+                      <th className="px-4 py-3">Description</th>
+                      <th className="px-4 py-3">Counterparty</th>
+                      <th className="px-4 py-3">Amount</th>
+                      <th className="px-4 py-3">External ID</th>
                     </tr>
-                  ) : null}
-                </tbody>
-              </table>
-            </div>
+                  </thead>
+                  <tbody>
+                    {visibleDashboard.transactions.map((transaction) => (
+                      <tr
+                        key={transaction.id}
+                        className="border-b border-[#edf0eb]"
+                      >
+                        <td className="px-4 py-3">{transaction.postedAt}</td>
+                        <td className="max-w-[320px] px-4 py-3">
+                          {transaction.description}
+                        </td>
+                        <td className="px-4 py-3">
+                          {transaction.counterparty}
+                        </td>
+                        <td className="px-4 py-3 tabular-nums">
+                          {centsToDollars(transaction.amountCents)}
+                        </td>
+                        <td className="px-4 py-3 text-[#697386]">
+                          {transaction.externalId}
+                        </td>
+                      </tr>
+                    ))}
+                    {visibleDashboard.transactions.length === 0 ? (
+                      <tr>
+                        <td className="px-4 py-6 text-[#697386]" colSpan={5}>
+                          No transactions
+                        </td>
+                      </tr>
+                    ) : null}
+                  </tbody>
+                </table>
+              </div>
+            ) : null}
           </section>
         ) : null}
 

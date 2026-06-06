@@ -85,4 +85,12 @@ export class MatchRunDao {
       handleError(error, "MatchRunDao.findById");
     }
   }
+
+  static async deleteAll(tx: TransactionType = db): Promise<void> {
+    try {
+      await tx.delete(matchRuns);
+    } catch (error) {
+      handleError(error, "MatchRunDao.deleteAll");
+    }
+  }
 }

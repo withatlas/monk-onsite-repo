@@ -88,4 +88,12 @@ export class MatchResultDao {
       handleError(error, "MatchResultDao.listLatest");
     }
   }
+
+  static async deleteAll(tx: TransactionType = db): Promise<void> {
+    try {
+      await tx.delete(matchResults);
+    } catch (error) {
+      handleError(error, "MatchResultDao.deleteAll");
+    }
+  }
 }

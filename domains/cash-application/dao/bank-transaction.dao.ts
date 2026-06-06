@@ -43,4 +43,12 @@ export class BankTransactionDao {
       handleError(error, "BankTransactionDao.count");
     }
   }
+
+  static async deleteAll(tx: TransactionType = db): Promise<void> {
+    try {
+      await tx.delete(bankTransactions);
+    } catch (error) {
+      handleError(error, "BankTransactionDao.deleteAll");
+    }
+  }
 }

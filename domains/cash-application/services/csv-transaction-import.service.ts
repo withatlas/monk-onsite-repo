@@ -3,6 +3,9 @@ import { z } from "zod";
 
 import type { BankTransaction, BankTransactionInsert } from "@/db/schema";
 import { BankTransactionDao } from "@/domains/cash-application/dao/bank-transaction.dao";
+import { MatchResultDao } from "@/domains/cash-application/dao/match-result.dao";
+import { MatchRunDao } from "@/domains/cash-application/dao/match-run.dao";
+import { db } from "@/domains/platform/infra/db/baseClient";
 import { dollarsToCents } from "@/lib/money";
 
 export const csvTransactionRowSchema = z
@@ -44,5 +47,16 @@ export class CsvTransactionImportService {
   static async importCsv(contents: string): Promise<BankTransaction[]> {
     const transactions = CsvTransactionImportService.parseCsv(contents);
     return BankTransactionDao.createMany(transactions);
+  }
+
+  static async replaceCsv(contents: string): Promise<BankTransaction[]> {
+    const transactions = CsvTransactionImportService.parseCsv(contents);
+
+    return db.transaction(async (tx) => {
+      await MatchResultDao.deleteAll(tx);
+      await MatchRunDao.deleteAll(tx);
+      await BankTransactionDao.deleteAll(tx);
+      return BankTransactionDao.createMany(transactions, tx);
+    });
   }
 }

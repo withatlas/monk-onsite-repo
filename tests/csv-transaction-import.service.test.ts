@@ -1,9 +1,14 @@
-import { describe, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 
 import { BankTransactionDao } from "@/domains/cash-application/dao/bank-transaction.dao";
+import { TransactionRoutes } from "@/domains/cash-application/routes/transactions";
 import { CsvTransactionImportService } from "@/domains/cash-application/services/csv-transaction-import.service";
 
 describe("CsvTransactionImportService", () => {
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
   it("parses transaction CSV rows", () => {
     const rows = CsvTransactionImportService.parseCsv(`external_id,posted_at,description,counterparty,amount,currency,memo,reference
 csv-1,2026-05-01,ACH CREDIT INV-2026-1001,Brightlayer Labs,1200.00,USD,paid by parent,INV-2026-1001`);
@@ -34,5 +39,30 @@ csv-3,2026-05-02,Incoming payment,B,200.00,USD`);
       expect.objectContaining({ externalId: "csv-2" }),
       expect.objectContaining({ externalId: "csv-3" }),
     ]);
+  });
+
+  it("replaces transactions when the upload route is in replace mode", async () => {
+    const importCsv = vi
+      .spyOn(CsvTransactionImportService, "importCsv")
+      .mockResolvedValue([]);
+    const replaceCsv = vi
+      .spyOn(CsvTransactionImportService, "replaceCsv")
+      .mockResolvedValue([]);
+    const formData = new FormData();
+
+    formData.set(
+      "file",
+      new File(
+        ["external_id,posted_at,description,counterparty,amount"],
+        "tx.csv",
+      ),
+    );
+
+    await TransactionRoutes.uploadCsv(formData, { replace: true });
+
+    expect(replaceCsv).toHaveBeenCalledWith(
+      "external_id,posted_at,description,counterparty,amount",
+    );
+    expect(importCsv).not.toHaveBeenCalled();
   });
 });
