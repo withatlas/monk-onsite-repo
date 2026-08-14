@@ -53,6 +53,32 @@ export const seedCustomers = customerRows.map(
   })
 ) satisfies CustomerInsert[];
 
+const customerIdByExternalRef = new Map(
+  seedCustomers.map((customer) => [customer.externalRef, customer.id])
+);
+
+const customerIdFor = (externalRef: string) => {
+  const customerId = customerIdByExternalRef.get(externalRef);
+
+  if (!customerId) {
+    throw new Error(`Unknown seed customer external ref: ${externalRef}`);
+  }
+
+  return customerId;
+};
+
+const invoiceCustomerOverrides = new Map<string, string>([
+  ["INV-2026-1012", customerIdFor("CUST-007")],
+  ["INV-2026-1014", customerIdFor("CUST-002")],
+  ["INV-2026-1017", customerIdFor("CUST-001")],
+  ["INV-2026-1025", customerIdFor("CUST-012")],
+  ["INV-2026-1029", customerIdFor("CUST-015")],
+  ["INV-2026-1030", customerIdFor("CUST-010")],
+  ["INV-2026-1036", customerIdFor("CUST-013")],
+  ["INV-2026-1038", customerIdFor("CUST-002")],
+  ["INV-2026-1042", customerIdFor("CUST-007")],
+]);
+
 const baseSeedInvoices = Array.from({ length: 60 }).map((_, index) => {
   const month = Math.floor(index / 15) + 1;
   const day = (index % 15) + 1;
@@ -62,7 +88,9 @@ const baseSeedInvoices = Array.from({ length: 60 }).map((_, index) => {
 
   return {
     id: uuidFromNumber(1001 + index),
-    customerId: seedCustomers[index % seedCustomers.length]!.id,
+    customerId:
+      invoiceCustomerOverrides.get(invoiceNumber) ??
+      seedCustomers[index % seedCustomers.length]!.id,
     invoiceNumber,
     issueDate,
     dueDate,
