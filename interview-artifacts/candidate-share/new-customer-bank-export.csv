@@ -1,0 +1,56 @@
+external_id,posted_at,description,counterparty,amount,currency,memo,reference,gross_amount,fee_amount,net_amount,vendor
+txn_001,2026-06-03,LBX 88421 DEP REMIT BATCH,Meridian Lockbox,27450.00,USD,June lockbox receipts for several customers,INV-2026-1001|INV-2026-1002|INV-2026-1003,27450.00,0.00,27450.00,MERIDIAN LOCKBOX
+txn_002,2026-06-03,CARD SETTLE 93024 MERCH,Adyen Settlement,11612.65,USD,Card payout less processor fees,INV-2026-1020|INV-2026-1021,12029.00,416.35,11612.65,ADYEN SETTLEMENT
+txn_003,2026-06-04,ACH CCD CREDIT 7718 ORIGIN UNKNOWN,ACH Transfer,12000.00,USD,Enterprise renewal paid by parent entity,,12000.00,0.00,12000.00,ACH TRANSFER
+txn_004,2026-06-04,STRIPE TRANSFER 8842,Stripe Payout,12807.50,USD,Daily net payout for Redwood invoices INV-2026-1015 and INV-2026-1060,INV-2026-1015|INV-2026-1060,13053.00,245.50,12807.50,STRIPE PAYOUT
+txn_005,2026-06-05,ACH CREDIT INV-2026-1001,Brightlayer Labs,1200.00,USD,April invoice payment,,1200.00,0.00,1200.00,BRIGHTLAYER LABS
+txn_006,2026-06-05,AWS BILL 9821,Operating Vendor,-1842.77,USD,AWS monthly,,-1842.77,0.00,-1842.77,OPERATING VENDOR
+txn_007,2026-06-06,ACH PMT JCLOUD SUBS,JCloud,4255.00,USD,April services for Juniper Cloud,INV-2026-1006,4255.00,0.00,4255.00,JCLOUD
+txn_008,2026-06-06,LOCKBOX CUSTOMER PAYMENTS,Bank Lockbox,15100.00,USD,Mail batch with partial remittances,INV-2026-1009|INV-2026-1010|INV-2026-1011,15100.00,0.00,15100.00,BANK LOCKBOX
+txn_009,2026-06-07,OUTGOING REFUND MAPLE,Maple Robotics,-750.00,USD,Credit request against prior invoice,INV-2026-1023,-750.00,0.00,-750.00,MAPLE ROBOTICS
+txn_010,2026-06-07,ACH CREDIT BLUEBIRD,Bluebird Learning,5200.00,USD,Short pay for May invoice,INV-2026-1011,5200.00,0.00,5200.00,BLUEBIRD LEARNING
+txn_011,2026-06-08,CARD SETTLEMENT BATCH 515,Card Processor,9544.75,USD,Batch less fees for multiple invoices,INV-2026-1018|INV-2026-1019,9800.00,255.25,9544.75,CARD PROCESSOR
+txn_012,2026-06-08,WIRE INCOMING OPERATIONS,Unknown Sender,5108.00,USD,Wire from customer with bank fee withheld,INV-2026-1008,5123.00,15.00,5108.00,UNKNOWN SENDER
+txn_013,2026-06-09,ACH CCD SUMMIT RETAIL PAY,Summit Retail,2833.00,USD,Customer overpaid by 50 dollars,INV-2026-1004,2833.00,0.00,2833.00,SUMMIT RETAIL
+txn_014,2026-06-09,GUSTO PAYROLL,Payroll Provider,-7450.00,USD,Payroll debit,,-7450.00,0.00,-7450.00,PAYROLL PROVIDER
+txn_015,2026-06-10,ACH CREDIT COBALT ANALYTICS,Cobalt Data,6759.00,USD,Combined invoices under customer alias,INV-2026-1003|INV-2026-1018,6759.00,0.00,6759.00,COBALT DATA
+txn_016,2026-06-10,CLIENT PAYMENT ONLINE,Bright Layer,3500.00,USD,Missing remittance details,,3500.00,0.00,3500.00,BRIGHT LAYER
+txn_017,2026-06-11,ACH CREDIT INV-2026-1002,Northstar Bio,1811.00,USD,Reference copied from remittance email,,1811.00,0.00,1811.00,NORTHSTAR BIO
+txn_018,2026-06-11,ACH CREDIT NORTHSTAR MAY,Northstar,1943.00,USD,Customer says this is INV-2026-1014,INV-2026-1014,1943.00,0.00,1943.00,NORTHSTAR
+txn_019,2026-06-12,WEB PAYMENT CLINICAL REPORTING,Regional Health Treasury,3194.00,USD,Provider reporting module renewal paid by healthcare treasury with no invoice id,,3194.00,0.00,3194.00,REGIONAL HEALTH TREASURY
+txn_020,2026-06-12,ACH CREDIT INV-2026-1022,Harbor Systems,7730.00,USD,Customer short paid by one dollar,INV-2026-1022,7730.00,0.00,7730.00,HARBOR SYSTEMS
+txn_021,2026-06-13,MERCHANT SETTLEMENT 7742,Stripe Payout,4793.10,USD,Gross payment for INV-2026-1007 net of fee,INV-2026-1007,4916.00,122.90,4793.10,STRIPE PAYOUT
+txn_022,2026-06-13,ACH CREDIT INV-2026-1008,Wire Transfer,5277.00,USD,Reference to closed prior invoice,INV-2026-1008,5277.00,0.00,5277.00,WIRE TRANSFER
+txn_023,2026-06-14,LOCKBOX 49210 CUSTOMER PAYMENTS,Bank Lockbox,14087.00,USD,Three checks in one lockbox deposit,INV-2026-1009|INV-2026-1010|INV-2026-1011,14087.00,0.00,14087.00,BANK LOCKBOX
+txn_024,2026-06-14,CARD PAYOUT 912,Card Processor,1289.00,USD,Processor payout for INV-2026-1013 net of small fee,INV-2026-1013,1332.00,43.00,1289.00,CARD PROCESSOR
+txn_025,2026-06-15,ACH CREDIT INV-2026-1025,Crescent Foods,1464.00,USD,Single invoice remittance,,1464.00,0.00,1464.00,CRESCENT FOODS
+txn_026,2026-06-15,ACH CREDIT LEARNING PLATFORM,Education Treasury,2075.00,USD,Training platform renewal paid by central education treasury with no invoice id,,2075.00,0.00,2075.00,EDUCATION TREASURY
+txn_027,2026-06-16,WIRE INCOMING COLD CHAIN,Food Logistics Parent,2636.00,USD,Cold chain food distribution analytics renewal paid by parent company,,2636.00,0.00,2636.00,FOOD LOGISTICS PARENT
+txn_028,2026-06-16,ACH PMT CARRIER NETWORK,Carrier Operations AP,3047.00,USD,Carrier network analytics renewal with no invoice details in remittance,,3047.00,0.00,3047.00,CARRIER OPERATIONS AP
+txn_029,2026-06-17,ACH CREDIT INV-2026-1029,Redwood Mobility,3508.00,USD,Overpaid by 50 dollars,INV-2026-1029,3508.00,0.00,3508.00,REDWOOD MOBILITY
+txn_030,2026-06-17,ACH CREDIT INV-2026-1030,Pioneer HR,4519.00,USD,Prior paid invoice appears again,INV-2026-1030,4519.00,0.00,4519.00,PIONEER HR
+txn_031,2026-06-18,ACH CREDIT INV-2026-1038,Northstar Bio,2207.00,USD,Single invoice remittance,,2207.00,0.00,2207.00,NORTHSTAR BIO
+txn_032,2026-06-18,WEB PAYMENT GRID ANALYTICS,Energy Operations Treasury,2768.00,USD,Grid operations analytics support renewal from energy treasury,,2768.00,0.00,2768.00,ENERGY OPERATIONS TREASURY
+txn_033,2026-06-19,ACH PAYMENT PEOPLE OPS,People Operations AP,3179.00,USD,Workforce onboarding reporting renewal paid by shared services,,3179.00,0.00,3179.00,PEOPLE OPERATIONS AP
+txn_034,2026-06-19,CARD SETTLEMENT BATCH 621,Card Processor,3469.50,USD,Closed invoice with fee-netted settlement,INV-2026-1041,3590.00,120.50,3469.50,CARD PROCESSOR
+txn_035,2026-06-20,ACH CREDIT INV-2026-1042,Harbor Systems,4601.00,USD,Short payment against invoice,INV-2026-1042,4601.00,0.00,4601.00,HARBOR SYSTEMS
+txn_036,2026-06-20,LOCKBOX 77120 CUSTOMER PAYMENT,Bank Lockbox,20995.00,USD,Four invoice batch with one short payment,INV-2026-1043|INV-2026-1044|INV-2026-1045|INV-2026-1046,20995.00,0.00,20995.00,BANK LOCKBOX
+txn_037,2026-06-21,ACH CCD PAYMENT 81221,Unknown Sender,1596.00,USD,Freight dock scheduling subscription paid through bank portal without invoice number,,1596.00,0.00,1596.00,UNKNOWN SENDER
+txn_038,2026-06-21,ACH CREDIT BRIGHTLAYER RENEWAL,Brightlayer Labs,2915.00,USD,Duplicate invoice number from customer email,INV-2026-1016,2915.00,0.00,2915.00,BRIGHTLAYER LABS
+txn_039,2026-06-22,ACH CREDIT INV-2026-1017,Bright Layer,3325.00,USD,One dollar short with alias counterparty,INV-2026-1017,3325.00,0.00,3325.00,BRIGHT LAYER
+txn_040,2026-06-22,OUTGOING CUSTOMER REFUND,Bluebird Learning,-125.00,USD,Refund related to prior overpayment,,-125.00,0.00,-125.00,BLUEBIRD LEARNING
+txn_041,2026-06-23,WIRE INCOMING OPERATIONS,Unknown Sender,8842.00,USD,Customer wire for INV-2026-1023 sent by parent entity,INV-2026-1023,8842.00,0.00,8842.00,UNKNOWN SENDER
+txn_042,2026-06-23,ACH CREDIT ENERGY OPS,Central Utilities Treasury,10153.00,USD,Energy operations telemetry renewal paid by utilities treasury with no invoice id,,10153.00,0.00,10153.00,CENTRAL UTILITIES TREASURY
+txn_043,2026-06-24,ADYEN PAYOUT 7810,Adyen Settlement,5711.00,USD,Net of fees across two invoices,INV-2026-1031|INV-2026-1032,5721.00,10.00,5711.00,ADYEN SETTLEMENT
+txn_044,2026-06-24,ACH CREDIT INV-2026-1033,Cobalt Analytics,6702.00,USD,Short payment by 50 dollars,INV-2026-1033,6702.00,0.00,6702.00,COBALT ANALYTICS
+txn_045,2026-06-25,ONLINE TRANSFER CUSTOMER RECEIPTS,Meridian Lockbox,17837.00,USD,Combined remittance for INV-2026-1034 and INV-2026-1035,INV-2026-1034|INV-2026-1035,17837.00,0.00,17837.00,MERIDIAN LOCKBOX
+txn_046,2026-06-25,ACH CREDIT INV-2026-1036,Evergreen Telecom,10286.00,USD,Customer overpaid by one dollar,INV-2026-1036,10286.00,0.00,10286.00,EVERGREEN TELECOM
+txn_047,2026-06-26,VENDOR DEBIT INSURANCE,Insurance Carrier,-2110.50,USD,Monthly insurance debit,,-2110.50,0.00,-2110.50,INSURANCE CARRIER
+txn_048,2026-06-26,ACH CREDIT STORE PLANNING,Retail Shared Services,7863.00,USD,Retail store planning analytics renewal from shared services with no invoice id,,7863.00,0.00,7863.00,RETAIL SHARED SERVICES
+txn_049,2026-06-27,BANK FEE,Bank Fees,-35.00,USD,Wire fee,,-35.00,0.00,-35.00,BANK FEES
+txn_050,2026-06-27,ACH CREDIT INV-2026-1012,Harbor Freight Systems,10021.00,USD,Single invoice exact remittance,INV-2026-1012,10021.00,0.00,10021.00,HARBOR FREIGHT SYSTEMS
+txn_018,2026-06-11,ACH CREDIT NORTHSTAR MAY,Northstar,1943.00,USD,Customer says this is INV-2026-1014,INV-2026-1014,1943.00,0.00,1943.00,NORTHSTAR
+txn_052,2026-06-28,WIRE CREDIT LAB PLATFORM,Central Treasury,9106.00,USD,Renewal for bioscience lab analytics platform approved by parent procurement. No invoice number was included,,9106.00,0.00,9106.00,CENTRAL TREASURY
+txn_053,2026-06-28,ACH CREDIT COUNSEL OPS,Outside Counsel Ops,5673.00,USD,Payment for matter intake and counsel workflow subscription. Legal team sent no invoice id,,5673.00,0.00,5673.00,OUTSIDE COUNSEL OPS
+txn_054,2026-06-29,WIRE CREDIT GRID OPS,Central Utilities Procurement,4783.00,USD,Energy operations platform renewal from central utilities procurement. Remittance omitted invoice details,,4783.00,0.00,4783.00,CENTRAL UTILITIES PROCUREMENT
+txn_055,2026-06-29,ACH CREDIT COLD CHAIN,Grocery Logistics Parent,7016.00,USD,Food distribution analytics renewal paid by grocery logistics parent with no invoice number,,7016.00,0.00,7016.00,GROCERY LOGISTICS PARENT
